@@ -1,0 +1,113 @@
+{
+  "entities": {
+    "video": {
+      "title": "Cinema Video",
+      "description": "Cinema studio video record rendered or saved in the studio",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique video document identifier"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the video",
+          "maxLength": 128
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Generation prompt used for the video",
+          "maxLength": 2048
+        },
+        "videoUrl": {
+          "type": "string",
+          "description": "URL of the video asset",
+          "maxLength": 1024
+        },
+        "aspectRatio": {
+          "type": "string",
+          "description": "Aspect ratio (16:9 or 9:16)",
+          "maxLength": 16
+        },
+        "authorId": {
+          "type": "string",
+          "description": "UID of the user who generated or saved the video",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["id", "title", "prompt", "videoUrl"]
+    },
+    "studioProject": {
+      "title": "Studio Project",
+      "description": "Cinema project settings including color grading and watermarks",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Project ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "Project title",
+          "maxLength": 128
+        },
+        "ownerId": {
+          "type": "string",
+          "description": "Owner user UID",
+          "maxLength": 128
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp"
+        }
+      },
+      "required": ["id", "title"]
+    },
+    "userProfile": {
+      "title": "User Profile",
+      "description": "User profile and operator credentials",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID",
+          "maxLength": 128
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of operator",
+          "maxLength": 256
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name of operator",
+          "maxLength": 128
+        },
+        "role": {
+          "type": "string",
+          "description": "User role",
+          "enum": ["operator", "director", "admin"]
+        }
+      },
+      "required": ["userId", "email"]
+    }
+  },
+  "firestore": {
+    "/videos/{videoId}": {
+      "schema": "video",
+      "description": "Cinema studio video collection"
+    },
+    "/studioProjects/{projectId}": {
+      "schema": "studioProject",
+      "description": "Saved studio projects"
+    },
+    "/users/{userId}": {
+      "schema": "userProfile",
+      "description": "User profile collection"
+    }
+  }
+}

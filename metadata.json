@@ -1,0 +1,11 @@
+{
+  "name": "KNOCKSSTUDiOS Enterprise 4K Ultra Cinema",
+  "description": "KNOCKSSTUDiOS Hollywood Motion Pictures Enterprise Suite: 4K HDR Ultra Cinema, 3D/2D animation pipeline, Bioluminescent Color grading, DTS & Dolby Digital spatial audio, Veo 3 film engine, cloud sync, and downloadable Windows Rust desktop package.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ],
+  "prompt": ""
+}

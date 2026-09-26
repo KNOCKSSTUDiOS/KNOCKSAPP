@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060C" />
+      <stop offset="50%" stop-color="#0A1124" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+    <linearGradient id="bezelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0055FF" />
+    </linearGradient>
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A253C" />
+      <stop offset="70%" stop-color="#0B101D" />
+      <stop offset="100%" stop-color="#050810" />
+    </linearGradient>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect x="16" y="16" width="480" height="480" rx="100" fill="url(#bgGrad)" stroke="url(#bezelGrad)" stroke-width="12" />
+
+  <!-- Outer Bioluminescent Ring -->
+  <circle cx="256" cy="220" r="120" fill="none" stroke="#00E5FF" stroke-width="8" filter="url(#cyanGlow)" />
+  <circle cx="256" cy="220" r="105" fill="url(#hubGrad)" stroke="#00E5FF" stroke-width="3" stroke-opacity="0.5" />
+
+  <!-- 6 Cinema Perforations -->
+  <g fill="#030509" stroke="#00E5FF" stroke-width="3">
+    <circle cx="318" cy="220" r="20" />
+    <circle cx="287" cy="273" r="20" />
+    <circle cx="225" cy="273" r="20" />
+    <circle cx="194" cy="220" r="20" />
+    <circle cx="225" cy="167" r="20" />
+    <circle cx="287" cy="167" r="20" />
+  </g>
+
+  <!-- Glowing Core -->
+  <circle cx="256" cy="220" r="18" fill="#00E5FF" filter="url(#cyanGlow)" />
+
+  <!-- Typography -->
+  <g text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900">
+    <text x="238" y="390" font-size="34" fill="#FFFFFF" letter-spacing="2">KNOCKSSTUD</text>
+    <text x="325" y="390" font-size="34" fill="#00E5FF">i</text>
+    <text x="350" y="390" font-size="34" fill="#FFFFFF" letter-spacing="2">OS</text>
+  </g>
+  <text x="256" y="435" text-anchor="middle" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="19" fill="#00E5FF" letter-spacing="4">
+    4K ULTRA CINEMA
+  </text>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "short_name": "KNOCKSSTUDiOS",
+  "name": "KNOCKSSTUDiOS Enterprise 4K Ultra Cinema",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#030407",
+  "theme_color": "#00E5FF",
+  "display": "standalone",
+  "orientation": "landscape"
+}
